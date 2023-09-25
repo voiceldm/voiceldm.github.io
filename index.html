@@ -551,37 +551,35 @@
                         </tr>
                     </tbody>
                     
-                    <!--
                     <thead>
                         <tr>
-                        <td scope="col" width=280px>
-                            <font color="061E61">the sound of a light saber.</font>
-                        </td>
-                        <td scope="col" width=280px>
-                            <font color="061E61">The sound of dreams colliding, creating a surreal and wondrous composition.</font>
-                        </td>
-                        <td scope="col" width=280px>
-                            <font color="061E61">The splashing of water in a pond.</font>
-                        </td>
+                            <td scope="col" width=280px>
+                                <font color="432D57"><b>Content:</b> <i>The album was later re-released as "Teen Beat: The Best of Carl Perkins"</i></font>
+                            </td>
+                            <td scope="col" width=280px>
+                                <font color="432D57"><b>Content:</b> <i>Do you ever doodle things on a piece of paper when you're bored?</i> </font>
+                            </td>
+                            <td scope="col" width=280px>
+                                <font color="432D57"><b>Content:</b> <i>Eye trackers used to cost several thousand dollars, but now you can grab a cheap one for less than a couple hundred bucks.</i></font>
+                            </td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td scope="row"><audio controls="controls">
-                            <source src="demos/tta_headline_nine_audio/the_sound_of_a_light_saber.flac"
+                            <source src="audio_samples/tts/7.wav"
                                 autoplay />Your browser does not support the audio element.
                             </audio></td>
                         <td><audio controls="controls">
-                            <source src="demos/tta_headline_nine_audio/The_sound_of_dreams_colliding,_creating_a_surreal_and_wondrous_composition.flac"
+                            <source src="audio_samples/tts/8.wav"
                                 autoplay />Your browser does not support the audio element.
                             </audio></td>
                             <td><audio controls="controls">
-                            <source
-                                    src="demos/tta_headline_nine_audio/The_splashing_of_water_in_a_pond.flac"
+                            <source src="audio_samples/tts/9.wav"
                                 autoplay />Your browser does not support the audio element.
                             </audio></td>
                         </tr>
-                    </tbody> -->
+                    </tbody>
                 </table>
 
 
@@ -590,9 +588,9 @@
                 <h2 id="section_3">
                     <font color="432D57">(Zero-Shot) Text-to-Audio</font>
                     </h2>
-                    <!-- <p>
-                        <i>"clean speech for an audiobook" is given as the description prompt.</i>
-                    </p> -->
+                    <p>
+                        <i>Even though VoiceLDM is only trained on speech-infused audio, it is possible to perform text-to-audio that does not include speech. </i>
+                    </p>
                     <div class = "table-container">
                     <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
                         <thead>
@@ -655,6 +653,107 @@
                                     </audio></td>
                             </tr>
                         </tbody> -->
+                    </table>
+
+
+                    <br></br>
+
+                <h2 id="section_4">
+                    <font color="432D57">Effect of Dual Classifier-Free Guidance</font>
+                    </h2>
+                    <p>Audios are generated with varying guidance strengths, using the same random seed.</p>
+                    <p><b>Description:</b> <i>"Singing with music in the background."</i> <b>Content:</b> <i>"Roses are red, Violets are blue!" </i></p>
+                    <div class = "table-container">
+                    <table class="table" align="center" style="table-layout: fixed;word-break:break-word; text-align: center">
+                        <thead>
+                            <tr>
+                                <td scope="col" width=280px>
+                                    <font color="432D57"> $w_{desc} = 5$, $w_{cont} = 5$ </font>
+                                </td>
+                                <td scope="col" width=280px>
+                                    <font color="432D57"> $w_{desc} = 5$, $w_{cont} = 7$ </font>
+                                </td>
+                                <td scope="col" width=280px>
+                                    <font color="432D57"> $w_{desc} = 5$, $w_{cont} = 9$ </font>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row"><audio controls="controls">
+                                    <source src="audio_samples/dcfg/1.wav"
+                                        autoplay />Your browser does not support the audio element.
+                                    </audio></td>
+                                <td><audio controls="controls">
+                                    <source src="audio_samples/dcfg/2.wav"
+                                        autoplay />Your browser does not support the audio element.
+                                    </audio></td>
+                                <td><audio controls="controls">
+                                    <source src="audio_samples/dcfg/3.wav"
+                                        autoplay />Your browser does not support the audio element.
+                                    </audio></td>
+                            </tr>
+                        </tbody>
+        
+                        <thead>
+                            <tr>
+                                <td scope="col" width=280px>
+                                    <font color="432D57"> $w_{desc} = 7$, $w_{cont} = 5$ </font>
+                                </td>
+                                <td scope="col" width=280px>
+                                    <font color="432D57"> $w_{desc} = 7$, $w_{cont} = 7$ </font>
+                                </td>
+                                <td scope="col" width=280px>
+                                    <font color="432D57"> $w_{desc} = 7$, $w_{cont} = 9$ </font>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row"><audio controls="controls">
+                                    <source src="audio_samples/dcfg/4.wav"
+                                        autoplay />Your browser does not support the audio element.
+                                    </audio></td>
+                                <td><audio controls="controls">
+                                    <source src="audio_samples/dcfg/5.wav"
+                                        autoplay />Your browser does not support the audio element.
+                                    </audio></td>
+                                <td><audio controls="controls">
+                                    <source src="audio_samples/dcfg/6.wav"
+                                        autoplay />Your browser does not support the audio element.
+                                    </audio></td>
+                            </tr>
+                        </tbody>
+
+                        <thead>
+                            <tr>
+                                <td scope="col" width=280px>
+                                    <font color="432D57"> $w_{desc} = 9$, $w_{cont} = 5$ </font>
+                                </td>
+                                <td scope="col" width=280px>
+                                    <font color="432D57"> $w_{desc} = 9$, $w_{cont} = 7$ </font>
+                                </td>
+                                <td scope="col" width=280px>
+                                    <font color="432D57"> $w_{desc} = 9$, $w_{cont} = 9$ </font>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row"><audio controls="controls">
+                                    <source src="audio_samples/dcfg/7.wav"
+                                        autoplay />Your browser does not support the audio element.
+                                    </audio></td>
+                                <td><audio controls="controls">
+                                    <source src="audio_samples/dcfg/8.wav"
+                                        autoplay />Your browser does not support the audio element.
+                                    </audio></td>
+                                <td><audio controls="controls">
+                                    <source src="audio_samples/dcfg/9.wav"
+                                        autoplay />Your browser does not support the audio element.
+                                    </audio></td>
+                            </tr>
+                        </tbody>
                     </table>
 
 
